@@ -1,0 +1,81 @@
+.our-clients-section {
+    padding: 60px 0;
+    background-color: #11141e;
+}
+
+.our-clients-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: left;
+}
+
+.our-clients-subtitle {
+    text-align: left;
+    font-size: clamp(1.2rem, 1rem + 1vw, 1.8rem);
+    color: #e85780;
+    font-weight: 700;
+}
+
+.our-clients-title {
+    text-align: left;
+    font-weight: 600;
+    margin-bottom: 40px;
+    font-size: clamp(1.8rem, 1.5rem + 1.5vw, 2.5rem);
+    background: linear-gradient(270deg, #e85780 -48%, #355ab3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
+.our-clients-logo-grid {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    overflow-x: hidden;
+    white-space: nowrap;
+    position: relative;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.our-clients-logo-slide {
+    display: flex;
+    gap: 40px;
+    animation: scrollLogos 50s linear infinite;
+    will-change: transform;
+}
+
+.our-clients-logo-item {
+    flex: 0 0 auto;
+    padding: 10px;
+    transition: transform 0.3s ease;
+    border: 1px solid #262626;
+    border-radius: 8px; /* Adding a slight border radius for better appearance */
+}
+
+.our-clients-logo-item:hover {
+    transform: scale(1.05);
+}
+
+.our-clients-logo-item img {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+}
+
+@keyframes scrollLogos {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .our-clients-logo-item {
+        flex: 0 1 150px;
+    }
+}
